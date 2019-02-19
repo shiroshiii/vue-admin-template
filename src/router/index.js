@@ -141,6 +141,30 @@ export const constantRouterMap = [
       }
     ]
   },
+  // {
+  //   path: '/test',
+  //   component: Layout,
+  //   children: [{
+  //     path: 'index',
+  //     name: 'example',
+  //     component: () => import('@/views/example/index'),
+  //     meta:{title:"", icon:""}
+  //   }]
+  // },
+  {
+    path: 'external-link',
+    component: Layout,
+    children: [
+      {
+        // path: 'index',
+        // -> 直接实现跳转
+        path: 'https://www.hao123.com',
+        // name: 'Test',
+        // component: () => import('@/views/example/index'),
+        meta: { title: 'Test', icon: 'eye' }
+      }
+    ]
+  },
 
   { path: '*', redirect: '/404', hidden: true }
 ]
